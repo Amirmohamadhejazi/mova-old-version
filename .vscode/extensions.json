@@ -1,0 +1,13 @@
+{
+    "recommendations": [
+        "esbenp.prettier-vscode",
+        "streetsidesoftware.code-spell-checker",
+        "dsznajder.es7-react-js-snippets",
+        "dbaeumer.vscode-eslint",
+        "streetsidesoftware.code-spell-checker-persian",
+        "burkeholland.simple-react-snippets",
+        "bradlc.vscode-tailwindcss",
+        "stivo.tailwind-fold",
+        "wix.vscode-import-cost"
+    ]
+}
