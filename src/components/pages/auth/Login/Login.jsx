@@ -79,7 +79,7 @@ const Login = ({ setPosition }) => {
             </div>
 
             <div
-                className="w-full h-screen p-8 flex-col bg-no-repeat bg-opacity-0 bg-cover bg-center items-center justify-end text-white"
+                className="w-full  col-span-2 hidden lg:flex h-screen p-8 flex-col bg-no-repeat bg-opacity-0 bg-cover   bg-center items-center justify-end text-white"
                 style={{ backgroundImage: `url("${beforeAuthPic.src}")`, backgroundSize: '80%' }}
             ></div>
         </div>
