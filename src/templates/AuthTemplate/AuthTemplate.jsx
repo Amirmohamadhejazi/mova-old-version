@@ -1,19 +1,23 @@
 import React, { useState } from 'react';
-import BeforeAuth from '@components/pages/auth/BeforeAuth/BeforeAuth';
-import Login from '@components/pages/auth/Login/Login';
-import SignUp from '@components/pages/auth/SignUp/SignUp';
-import OptionAuth from '@components/pages/auth/OptionAuth/OptionAuth';
+import { ChooseInterest, OptionAuth, SignUp, Login, BeforeAuth } from '@components/index';
 const AuthTemplate = () => {
     const [position, setPosition] = useState('beforeAuth');
     switch (position) {
-        case 'beforeAuth':
+        case 'beforeAuth': {
             return <BeforeAuth setPosition={setPosition} />;
-        case 'optionAuth':
+        }
+        case 'optionAuth': {
             return <OptionAuth setPosition={setPosition} />;
-        case 'login':
+        }
+        case 'login': {
             return <Login setPosition={setPosition} />;
-        case 'signUp':
+        }
+        case 'signUp': {
             return <SignUp setPosition={setPosition} />;
+        }
+        case 'chooseInterest': {
+            return <ChooseInterest setPosition={setPosition} />;
+        }
     }
 };
 

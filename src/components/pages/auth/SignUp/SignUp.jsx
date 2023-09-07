@@ -54,7 +54,7 @@ const SignUp = ({ setPosition }) => {
                             className="w-full  py-1 font-bold hover:bg-[#E21221]  bg-[#E21221] flex items-center justify-center"
                             radius="xl"
                             size="lg"
-                            onClick={() => setPosition('signUp')}
+                            onClick={() => setPosition('chooseInterest')}
                         >
                             ثبت نام
                         </Button>

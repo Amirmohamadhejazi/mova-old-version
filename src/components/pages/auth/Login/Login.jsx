@@ -54,7 +54,7 @@ const Login = ({ setPosition }) => {
                             className="w-full  py-1 font-bold hover:bg-[#E21221]  bg-[#E21221] flex items-center justify-center"
                             radius="xl"
                             size="lg"
-                            onClick={() => setPosition('login')}
+                            onClick={() => setPosition('chooseInterest')}
                         >
                             ورود
                         </Button>

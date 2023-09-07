@@ -46,8 +46,8 @@ const BeforeAuth = ({ setPosition }) => {
                         }
                     }}
                 >
-                    {carouselData.map((itemsSlide) => (
-                        <Carousel.Slide>
+                    {carouselData.map((itemsSlide, index) => (
+                        <Carousel.Slide key={index}>
                             <div className="w-full h-30 flex justify-center gap-y-1 flex-col text-center select-none text-white ">
                                 <span className="font-bold text-3xl">{itemsSlide.title}</span>
                                 <span className="text-base font-bold">{itemsSlide.description}</span>
