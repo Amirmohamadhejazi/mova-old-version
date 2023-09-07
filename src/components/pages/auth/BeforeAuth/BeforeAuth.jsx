@@ -1,9 +1,9 @@
 'use client';
 import { Carousel } from '@mantine/carousel';
-import { posterBeforeAuth } from '@components/common/pictures';
+import { beforeAuthPic, posterBeforeAuth } from '@components/common/pictures';
 import { rem } from '@mantine/core';
 import { Button } from '@mantine/core';
-const BeforeAuth = ( { setPosition }) => {
+const BeforeAuth = ({ setPosition }) => {
     const carouselData = [
         {
             title: 'به موا خوش آمدید',
@@ -19,51 +19,57 @@ const BeforeAuth = ( { setPosition }) => {
         }
     ];
     return (
-        <div
-            className="w-full  h-screen p-8  flex-col bg-no-repeat bg-opacity-0 bg-cover sm:bg-contain bg-center flex  items-center justify-end text-white"
-            style={{ backgroundImage: `url("${posterBeforeAuth.src}")` }}
-        >
-            <Carousel
-                maw={'100%'}
-                mx="auto"
-                withIndicators
-                height={'120px'}
-                withControls={false}
-                slidesToScroll={1}
-                styles={{
-                    root: {
-                        direction: 'ltr'
-                    },
+        <div className="grid grid-cols-3">
+            <div
+                className="w-full  h-screen p-8 col-span-3 lg:col-span-1 flex-col bg-no-repeat bg-opacity-0 bg-cover   bg-center flex  items-center justify-end text-white"
+                style={{ backgroundImage: `url("${posterBeforeAuth.src}")` }}
+            >
+                <Carousel
+                    maw={'100%'}
+                    mx="auto"
+                    withIndicators
+                    height={'120px'}
+                    withControls={false}
+                    slidesToScroll={1}
+                    styles={{
+                        root: {
+                            direction: 'ltr'
+                        },
 
-                    indicator: {
-                        width: rem(12),
-                        height: rem(4),
-                        transition: 'width 250ms ease',
-                        '&[data-active]': {
-                            width: rem(40)
+                        indicator: {
+                            width: rem(12),
+                            height: rem(4),
+                            transition: 'width 250ms ease',
+                            '&[data-active]': {
+                                width: rem(40)
+                            }
                         }
-                    }
-                }}
-            >
-                {carouselData.map((itemsSlide) => (
-                    <Carousel.Slide>
-                        <div className="w-full h-30 flex justify-center gap-y-1 flex-col text-center text-white ">
-                            <span className="font-bold text-3xl">{itemsSlide.title}</span>
-                            <span className="text-base font-bold">{itemsSlide.description}</span>
-                        </div>
-                    </Carousel.Slide>
-                ))}
-            </Carousel>
-            <Button
-                color="red"
-                className="w-full mt-3 py-1 font-bold hover:bg-[#E21221]  bg-[#E21221] flex items-center justify-center"
-                radius="xl"
-                size="lg"
-                onClick={() => setPosition('optionAuth')}
-                
-            >
-                ادامه به برنامه
-            </Button>
+                    }}
+                >
+                    {carouselData.map((itemsSlide) => (
+                        <Carousel.Slide>
+                            <div className="w-full h-30 flex justify-center gap-y-1 flex-col text-center select-none text-white ">
+                                <span className="font-bold text-3xl">{itemsSlide.title}</span>
+                                <span className="text-base font-bold">{itemsSlide.description}</span>
+                            </div>
+                        </Carousel.Slide>
+                    ))}
+                </Carousel>
+                <Button
+                    color="red"
+                    className="w-full mt-3 py-1 font-bold hover:bg-[#E21221]  bg-[#E21221] flex items-center justify-center"
+                    radius="xl"
+                    size="lg"
+                    onClick={() => setPosition('optionAuth')}
+                >
+                    ادامه به برنامه
+                </Button>
+            </div>
+
+            <div
+                className="w-full  h-screen p-8 col-span-2 hidden lg:flex  flex-col bg-no-repeat bg-opacity-0 bg-cover   bg-center  items-center justify-end text-white"
+                style={{ backgroundImage: `url("${beforeAuthPic.src}")`, backgroundSize: '80%' }}
+            ></div>
         </div>
     );
 };
