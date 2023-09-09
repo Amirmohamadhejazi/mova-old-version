@@ -1,6 +1,7 @@
 'use client';
 import { Carousel } from '@mantine/carousel';
-import { beforeAuthPic, posterBeforeAuth } from '@components/common/pictures';
+// import { beforeAuthPic, posterBeforeAuth } from '@components/common/pictures';
+import { beforeAuthPic, posterBeforeAuth } from '@public/pictures';
 import { rem } from '@mantine/core';
 import { Button } from '@mantine/core';
 const BeforeAuth = ({ setPosition }) => {

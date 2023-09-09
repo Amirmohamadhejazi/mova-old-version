@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ChooseInterest, OptionAuth, SignUp, Login, BeforeAuth } from '@components/index';
+import { ChooseInterest, OptionAuth, SignUp, Login, BeforeAuth, ForgerPassword, GetCode, ResetPassword } from '@components/index';
 const AuthTemplate = () => {
     const [position, setPosition] = useState('beforeAuth');
     switch (position) {
@@ -11,6 +11,15 @@ const AuthTemplate = () => {
         }
         case 'login': {
             return <Login setPosition={setPosition} />;
+        }
+        case 'forgetPassword': {
+            return <ForgerPassword setPosition={setPosition} />;
+        }
+        case 'forgetPasswordGetCode': {
+            return <GetCode setPosition={setPosition} />;
+        }
+        case 'resetPassword': {
+            return <ResetPassword setPosition={setPosition} />;
         }
         case 'signUp': {
             return <SignUp setPosition={setPosition} />;

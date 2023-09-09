@@ -1,5 +1,5 @@
 import './globals.css';
-import { yekan } from '@components/common/utils/font/font';
+import { yekan } from '@public/utils/font/font';
 
 export default function RootLayout({ children }) {
     return (

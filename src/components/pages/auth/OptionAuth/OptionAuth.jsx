@@ -5,7 +5,7 @@ import { FaFacebook, FaGithub } from 'react-icons/fa';
 
 import { Divider, Box, Paper, Text, Button } from '@mantine/core';
 import Link from 'next/link';
-import { beforeAuthPic, optionLoginPic } from '@components/common/pictures';
+import { beforeAuthPic, optionLoginPic } from '@public/pictures';
 import Image from 'next/image';
 const OptionAuth = ({ setPosition }) => {
     return (

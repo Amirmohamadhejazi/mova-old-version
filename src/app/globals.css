@@ -10,8 +10,8 @@
     background-color: rgb(216, 208, 208);
 }
 
-
-
-
-
- /* #C70039  */
+.mantine-1pg26xz:focus-within {
+    outline: none;
+    border-color: #E21221;
+    background-color: #ffced1;
+}

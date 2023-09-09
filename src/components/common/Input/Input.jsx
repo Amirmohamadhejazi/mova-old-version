@@ -18,7 +18,9 @@ const Input = ({ placeholder = '', type = 'text', children = <></> }) => {
 
     return (
         <div className="w-full relative group">
-            {children}
+            <div className="text-gray-400 group-focus-within:text-[#E21221] absolute top-1/2 right-4 -translate-y-1/2">
+                {children}
+            </div>
             <input
                 ref={inputRef}
                 placeholder={placeholder}

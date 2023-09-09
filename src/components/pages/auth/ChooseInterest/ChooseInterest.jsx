@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { RxArrowLeft } from 'react-icons/rx';
 import { Button } from '@mantine/core';
-import { beforeAuthPic } from '@components/common/pictures';
+import { beforeAuthPic } from '@public/pictures';
 const ChooseInterest = ({ setPosition }) => {
     const allGenre = [
         'کمدی',

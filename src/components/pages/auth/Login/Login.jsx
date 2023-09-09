@@ -4,7 +4,8 @@ import { MdEmail } from 'react-icons/md';
 import { RiGitRepositoryPrivateFill } from 'react-icons/ri';
 
 import { Button, Checkbox } from '@mantine/core';
-import { beforeAuthPic, logo } from '@components/common/pictures';
+import { beforeAuthPic, logo } from '@public/pictures';
+
 import Image from 'next/image';
 import Input from '@components/common/Input/Input';
 
@@ -25,17 +26,11 @@ const Login = ({ setPosition }) => {
 
                     <div className="w-full flex gap-y-6 flex-col relative mt-8">
                         <Input placeholder="ایمیل">
-                            <MdEmail
-                                size={24}
-                                className="text-gray-400 group-focus-within:text-[#E21221] absolute top-1/2 right-4 -translate-y-1/2"
-                            />
+                            <MdEmail size={24} />
                         </Input>
 
                         <Input placeholder="رمز ورود" type="password">
-                            <RiGitRepositoryPrivateFill
-                                size={24}
-                                className="text-gray-400 group-focus-within:text-[#E21221] absolute top-1/2 right-4 -translate-y-1/2"
-                            />
+                            <RiGitRepositoryPrivateFill size={24} />
                         </Input>
                     </div>
 
@@ -61,7 +56,10 @@ const Login = ({ setPosition }) => {
                     </div>
 
                     <div className="w-full text-center  mt-8">
-                        <span className="text-[#E21221] cursor-pointer font-semibold">
+                        <span
+                            className="text-[#E21221] cursor-pointer font-semibold"
+                            onClick={() => setPosition('forgetPassword')}
+                        >
                             رمز ورود را فراموش کرده اید؟
                         </span>
                     </div>
