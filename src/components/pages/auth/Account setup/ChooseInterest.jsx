@@ -74,6 +74,7 @@ const ChooseInterest = ({ setPosition }) => {
                     className="w-full  py-1 font-bold bg-[#E21221] hover:bg-[#E21221] flex items-center justify-center"
                     radius="xl"
                     size="lg"
+                    onClick={() => setPosition('editProfile')}
                 >
                     ادامه
                 </Button>
