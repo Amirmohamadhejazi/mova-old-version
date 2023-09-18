@@ -4,7 +4,8 @@ import { Carousel } from '@mantine/carousel';
 import { posterBeforeAuth } from '../../../../../public/pictures';
 import { rem } from '@mantine/core';
 import { Button } from '@mantine/core';
-const BeforeAuth = ({ setPosition }) => {
+
+const BeforeAuth = ({ setPosition }: { setPosition: React.Dispatch<React.SetStateAction<string>> }) => {
     const carouselData = [
         {
             title: 'به موا خوش آمدید',
@@ -69,4 +70,3 @@ const BeforeAuth = ({ setPosition }) => {
 };
 
 export default BeforeAuth;
-

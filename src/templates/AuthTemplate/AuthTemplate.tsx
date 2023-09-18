@@ -23,7 +23,7 @@ import {
     EditProfile
 } from '@components/index';
 const AuthTemplate = () => {
-    const [position, setPosition] = useState('beforeAuth');
+    const [position, setPosition] = useState<string>('beforeAuth');
 
     switch (position) {
         case 'beforeAuth': {

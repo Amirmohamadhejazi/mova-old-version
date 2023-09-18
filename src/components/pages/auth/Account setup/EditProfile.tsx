@@ -5,11 +5,11 @@ import { Select } from '@mantine/core';
 import { MdEmail, MdOutlineSmartphone } from 'react-icons/md';
 
 import Input from '@components/common/Input/Input';
-const EditProfile = ({ setPosition }) => {
+const EditProfile = ({ setPosition }: { setPosition: React.Dispatch<React.SetStateAction<string>> }) => {
     const [genres, setGenres] = useState([]);
     const [selectGender, setSelectGender] = useState(1);
 
-    const handleGenres = (genre) => {
+    const handleGenres = (genre: never) => {
         if (genres.includes(genre)) {
             const available = genres.filter((g) => g !== genre);
             setGenres(available);
@@ -97,4 +97,4 @@ const EditProfile = ({ setPosition }) => {
     );
 };
 
-export default EditProfile; 
+export default EditProfile;

@@ -9,7 +9,7 @@ import Image from 'next/image';
 import Input from '@components/common/Input/Input';
 import Loading from '@components/common/Loading/Loading';
 
-const ResetPassword = ({ setPosition }) => {
+const ResetPassword = ({ setPosition }: { setPosition: React.Dispatch<React.SetStateAction<string>> }) => {
     const [openModal, setOpenModal] = useState(false);
     return (
         <div className=" col-span-3 w-full h-full rounded-md  lg:col-span-1  p-8  text-black  flex-col flex justify-between relative">

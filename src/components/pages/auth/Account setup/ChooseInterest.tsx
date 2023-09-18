@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import { RxArrowLeft } from 'react-icons/rx';
 import { Button } from '@mantine/core';
-import { beforeAuthPic } from '@public/pictures';
-const ChooseInterest = ({ setPosition }) => {
+const ChooseInterest = ({ setPosition }: { setPosition: React.Dispatch<React.SetStateAction<string>> }) => {
     const allGenre = [
         'کمدی',
         'درام',
@@ -21,7 +20,7 @@ const ChooseInterest = ({ setPosition }) => {
 
     const [genres, setGenres] = useState([]);
 
-    const handleGenres = (genre) => {
+    const handleGenres = (genre: never) => {
         if (genres.includes(genre)) {
             const available = genres.filter((g) => g !== genre);
             setGenres(available);

@@ -3,7 +3,7 @@ import { loading } from '@public/pictures';
 import Image from 'next/image';
 import React from 'react';
 
-const Loading = ({ open, onClose }) => {
+const Loading = ({ open, onClose }: { open: boolean; onClose: ()=>{} }) => {
     return (
         <Modal
             styles={{

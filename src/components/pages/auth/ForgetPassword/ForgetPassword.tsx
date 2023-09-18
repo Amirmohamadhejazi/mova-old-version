@@ -3,11 +3,11 @@ import { RxArrowLeft } from 'react-icons/rx';
 import { MdEmail, MdTextsms } from 'react-icons/md';
 
 import { Button, Paper } from '@mantine/core';
-import { beforeAuthPic, forgetPass } from '@public/pictures';
+import { forgetPass } from '@public/pictures';
 
 import Image from 'next/image';
 
-const ForgerPassword = ({ setPosition }) => {
+const ForgerPassword = ({ setPosition }: { setPosition: React.Dispatch<React.SetStateAction<string>> }) => {
     const [typeRecovery, setTypeRecovery] = useState('phone');
     const detailBack = [
         {
@@ -41,8 +41,9 @@ const ForgerPassword = ({ setPosition }) => {
                         از کدام اطلاعات تماس برای بازنشانی رمز عبور شما استفاده کنیم؟
                     </p>
                     <div className="flex flex-col gap-y-5 ">
-                        {detailBack.map((itemsDetail) => (
+                        {detailBack.map((itemsDetail, index) => (
                             <Paper
+                                key={index}
                                 className={`bg-transparent cursor-pointer hover:shadow-sm justify-between   flex    border-2 ${
                                     typeRecovery === itemsDetail.type ? 'border-[#FD414F]' : 'border-[#EEEEEE] '
                                 } rounded-3xl items-center  `}

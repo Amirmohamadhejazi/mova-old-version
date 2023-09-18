@@ -9,7 +9,7 @@ import { beforeAuthPic, logo } from '@public/pictures';
 import Image from 'next/image';
 import Input from '@components/common/Input/Input';
 
-const Login = ({ setPosition }) => {
+const Login = ({ setPosition }: { setPosition: React.Dispatch<React.SetStateAction<string>> }) => {
     return (
         <div className="w-full h-full rounded-md  col-span-3 lg:col-span-1  p-8  text-black  flex-col flex justify-between relative">
             <div className="w-full">

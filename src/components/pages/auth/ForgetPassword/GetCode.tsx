@@ -1,9 +1,8 @@
 import { RxArrowLeft } from 'react-icons/rx';
 
 import { Button, Group, PinInput } from '@mantine/core';
-import { beforeAuthPic } from '@public/pictures';
 
-const GetCode = ({ setPosition }) => {
+const GetCode = ({ setPosition }: { setPosition: React.Dispatch<React.SetStateAction<string>> }) => {
     return (
         <div className="w-full h-full rounded-md  col-span-3 lg:col-span-1  p-8  text-black flex-col flex justify-between relative">
             <div className="w-full">

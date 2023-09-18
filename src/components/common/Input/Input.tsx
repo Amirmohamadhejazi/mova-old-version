@@ -1,6 +1,15 @@
 import React, { useRef, useState } from 'react';
 import { AiFillEyeInvisible, AiFillEye } from 'react-icons/ai';
-const Input = ({ placeholder = '', type = 'text', children, isDisabled = false, value = '' }) => {
+
+type propsType = {
+    placeholder: string;
+    type: string;
+    children: JSX.Element;
+    isDisabled: boolean;
+    value: string;
+};
+
+const Input: React.FC<propsType> = ({ placeholder = '', type = 'text', children, isDisabled = false, value = '' }) => {
     const inputRef = useRef(null);
 
     const [isPasswordVisible, setIsPasswordVisible] = useState(true);
@@ -24,7 +33,6 @@ const Input = ({ placeholder = '', type = 'text', children, isDisabled = false, 
                 </div>
             )}
 
-                
             <input
                 ref={inputRef}
                 placeholder={placeholder}

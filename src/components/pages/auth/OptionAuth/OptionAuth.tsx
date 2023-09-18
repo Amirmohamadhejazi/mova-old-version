@@ -7,7 +7,7 @@ import { Divider, Box, Paper, Text, Button } from '@mantine/core';
 import Link from 'next/link';
 import { beforeAuthPic, optionLoginPic } from '@public/pictures';
 import Image from 'next/image';
-const OptionAuth = ({ setPosition }) => {
+const OptionAuth = ({ setPosition }: { setPosition: React.Dispatch<React.SetStateAction<string>> }) => {
     return (
         <div
             className="w-full h-full rounded-md  text-black col-span-3 lg:col-span-1 px-8  flex-col bg-no-repeat bg-opacity-0
