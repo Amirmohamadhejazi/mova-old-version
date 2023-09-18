@@ -7,6 +7,7 @@ import { MdEmail, MdOutlineSmartphone } from 'react-icons/md';
 import Input from '@components/common/Input/Input';
 const EditProfile = ({ setPosition }) => {
     const [genres, setGenres] = useState([]);
+    const [selectGender, setSelectGender] = useState(1);
 
     const handleGenres = (genre) => {
         if (genres.includes(genre)) {
@@ -17,8 +18,12 @@ const EditProfile = ({ setPosition }) => {
         }
     };
 
+    let dataSelect = [
+        { value: 1, label: 'آقا' },
+        { value: 2, label: 'خانم' }
+    ];
     return (
-        <div className="w-full col-span-3 lg:col-span-1  p-8  text-black h-screen flex-col flex justify-between relative">
+        <div className="w-full h-full rounded-md  col-span-3 lg:col-span-1  p-8  text-black  flex-col flex justify-between relative">
             <div className="w-full ">
                 <div className="flex gap-2 justify-between items-center">
                     <span className="font-bold text-2xl">فراموشی رمز عبور</span>
@@ -28,28 +33,44 @@ const EditProfile = ({ setPosition }) => {
                 </div>
                 <div className="flex flex-col gap-2 mt-5">
                     <Input placeholder="نام و نام خانوادگی" />
-                    <Input placeholder="نام مستعار" />
-                    <Input placeholder="ایمیل">
-                        <MdEmail className="text-2xl  " />
-                    </Input>
+                    <div
+                        className={`w-full duration-200 group-focus-within:bg-red-50
+                        border-[1.5px] text-gray-400 rounded-lg flex items-center py-4 pr-12 bg-gray-100 outline-none relative`}
+                    >
+                        <span>Amirmohamadhejazi@gmail.com</span>
+                        <div className=" group-focus-within:text-[#E21221] absolute top-1/2 right-4 -translate-y-1/2">
+                            <MdEmail className="text-2xl " />
+                        </div>
+                    </div>
                     <Input placeholder="شماره تلفن همراه">
                         <MdOutlineSmartphone className="text-2xl  " />
                     </Input>
                     <Select
                         styles={(theme) => ({
-                            separator: {
-                                backgroundColor: 'red'
+                            root: {
+                                direction: 'ltr'
+                            },
+                            dropdown: {
+                                backgroundColor: 'rgb(243 244 246)'
+                            },
+                            item: {
+                                ':hover': {
+                                    backgroundColor: 'rgb(229 231 235)'
+                                }
+                            },
+                            input: {
+                                backgroundColor: 'rgb(243 244 246)',
+
+                                border: '1px solid #e5e7eb',
+                                ':focus': {
+                                    border: '1px solid #e5e7eb'
+                                }
                             }
                         })}
-                        data={[
-                            { value: 1, label: 1 },
-                            { value: 2, label: 2 },
-                            { value: 3, label: 3 },
-                            { value: 4, label: 4 }
-                        ]}
-                        onChange={(e) => console.log(e)}
-                        value={1}
-                        size={'xl'}
+                        data={dataSelect}
+                        onChange={setSelectGender}
+                        value={selectGender}
+                        size={'sm'}
                     />
                 </div>
             </div>
@@ -76,4 +97,4 @@ const EditProfile = ({ setPosition }) => {
     );
 };
 
-export default EditProfile;
+export default EditProfile; 

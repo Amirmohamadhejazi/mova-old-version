@@ -1,7 +1,30 @@
 import React, { useState } from 'react';
-import { ChooseInterest, OptionAuth, SignUp, Login, BeforeAuth, ForgerPassword, GetCode, ResetPassword, EditProfile } from '@components/index';
+// import {
+// ChooseInterest,
+// OptionAuth,
+// SignUp,
+// Login,
+// BeforeAuth,
+// ForgerPassword,
+// GetCode,
+// ResetPassword,
+// EditProfile
+// } from '@components';
+// import BeforeAuth from '@components/pages/auth/BeforeAuth/BeforeAuth';
+import {
+    ChooseInterest,
+    OptionAuth,
+    SignUp,
+    Login,
+    BeforeAuth,
+    ForgerPassword,
+    GetCode,
+    ResetPassword,
+    EditProfile
+} from '@components/index';
 const AuthTemplate = () => {
-    const [position, setPosition] = useState('editProfile');
+    const [position, setPosition] = useState('beforeAuth');
+
     switch (position) {
         case 'beforeAuth': {
             return <BeforeAuth setPosition={setPosition} />;

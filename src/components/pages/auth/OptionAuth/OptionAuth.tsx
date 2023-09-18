@@ -10,7 +10,7 @@ import Image from 'next/image';
 const OptionAuth = ({ setPosition }) => {
     return (
         <div
-            className="w-full text-black col-span-3 lg:col-span-1 h-screen p-8  flex-col bg-no-repeat bg-opacity-0
+            className="w-full h-full rounded-md  text-black col-span-3 lg:col-span-1 px-8  flex-col bg-no-repeat bg-opacity-0
              bg-cover sm:bg-contain bg-center flex justify-end  relative"
         >
             <button className="absolute left-8 top-8" onClick={() => setPosition('beforeAuth')}>

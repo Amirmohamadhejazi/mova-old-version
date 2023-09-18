@@ -24,7 +24,7 @@ const ForgerPassword = ({ setPosition }) => {
         }
     ];
     return (
-        <div className="w-full col-span-3 lg:col-span-1  p-8  text-black h-screen flex-col flex justify-between relative">
+        <div className="w-full h-full rounded-md  col-span-3 lg:col-span-1  p-8  text-black  flex-col flex justify-between relative">
             <div className="w-full">
                 <div className="flex gap-2 justify-between items-center">
                     <span className="font-bold text-2xl">فراموشی رمز عبور</span>

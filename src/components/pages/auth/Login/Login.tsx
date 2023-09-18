@@ -11,7 +11,7 @@ import Input from '@components/common/Input/Input';
 
 const Login = ({ setPosition }) => {
     return (
-        <div className="w-full col-span-3 lg:col-span-1  p-8  text-black h-screen flex-col flex justify-between relative">
+        <div className="w-full h-full rounded-md  col-span-3 lg:col-span-1  p-8  text-black  flex-col flex justify-between relative">
             <div className="w-full">
                 <button className="absolute left-8 top-8" onClick={() => setPosition('optionAuth')}>
                     <RxArrowLeft className="text-3xl " />

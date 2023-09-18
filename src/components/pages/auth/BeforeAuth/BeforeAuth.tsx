@@ -1,6 +1,7 @@
 'use client';
 import { Carousel } from '@mantine/carousel';
-import { posterBeforeAuth } from '@public/pictures';
+// import { posterBeforeAuth } from '@public/pictures';
+import { posterBeforeAuth } from '../../../../../public/pictures';
 import { rem } from '@mantine/core';
 import { Button } from '@mantine/core';
 const BeforeAuth = ({ setPosition }) => {
@@ -20,7 +21,7 @@ const BeforeAuth = ({ setPosition }) => {
     ];
     return (
         <div
-            className="w-full  h-screen p-8 col-span-3 lg:col-span-1 flex-col bg-no-repeat bg-opacity-0 bg-cover   bg-center flex  items-center justify-end text-white"
+            className="w-full h-full rounded-md p-8 col-span-3 lg:col-span-1 flex-col bg-no-repeat bg-opacity-0 bg-cover   bg-center flex  items-center justify-end text-white"
             style={{ backgroundImage: `url("${posterBeforeAuth.src}")` }}
         >
             <Carousel
@@ -68,3 +69,4 @@ const BeforeAuth = ({ setPosition }) => {
 };
 
 export default BeforeAuth;
+

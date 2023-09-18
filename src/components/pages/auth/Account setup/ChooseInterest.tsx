@@ -31,7 +31,7 @@ const ChooseInterest = ({ setPosition }) => {
     };
 
     return (
-        <div className="w-full col-span-3 lg:col-span-1  p-8  text-black h-screen flex-col flex justify-between relative">
+        <div className="w-full h-full rounded-md  col-span-3 lg:col-span-1  p-8  text-black  flex-col flex justify-between relative">
             <div className="w-full ">
                 <div className="px-8 absolute top-8 left-0 right-0 w-full flex items-center justify-between">
                     <span className="font-bold text-2xl">علاقه خود را انتخاب کنید</span>

@@ -10,7 +10,7 @@ import Input from '@components/common/Input/Input';
 
 const SignUp = ({ setPosition }) => {
     return (
-        <div className="w-full  p-8  col-span-3 lg:col-span-1  text-black h-screen flex-col flex justify-between relative">
+        <div className="w-full h-full rounded-md   p-8  col-span-3 lg:col-span-1  text-black  flex-col flex justify-between relative">
             <div className="w-full">
                 <button className="absolute left-8 top-8" onClick={() => setPosition('optionAuth')}>
                     <RxArrowLeft className="text-3xl " />

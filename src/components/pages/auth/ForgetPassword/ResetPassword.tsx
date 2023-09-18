@@ -12,7 +12,7 @@ import Loading from '@components/common/Loading/Loading';
 const ResetPassword = ({ setPosition }) => {
     const [openModal, setOpenModal] = useState(false);
     return (
-        <div className="w-full col-span-3 lg:col-span-1  p-8  text-black h-screen flex-col flex justify-between relative">
+        <div className=" col-span-3 w-full h-full rounded-md  lg:col-span-1  p-8  text-black  flex-col flex justify-between relative">
             <div className="w-full">
                 <div className="flex gap-2 justify-between items-center">
                     <span className="font-bold  text-2xl">ساخت رمز جدید</span>
