@@ -41,6 +41,7 @@ const Input: React.FC<propsType> = ({ placeholder = '', type = 'text', children,
                 border-[1.5px] group-focus-within:border-[#E21221] rounded-lg pl-6 py-4 bg-gray-100 outline-none
                 ${children ? 'pr-12' : 'pr-6'} `}
                 value={value}
+                onChange={() => {}}
                 disabled={isDisabled}
             />
             {type === 'password' && (
